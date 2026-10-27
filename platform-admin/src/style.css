@@ -1,0 +1,151 @@
+@import '@theme/assets/css/tailwind.css';
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap');
+
+html {
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    font-family: 'Cairo', sans-serif;
+}
+
+input,
+button {
+    font: inherit;
+}
+
+button,
+a,
+input {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.form-input {
+    min-height: 2.9rem;
+    border-color: #e2e8f0;
+    background-color: #fff;
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.form-input:focus {
+    border-color: #2eac97;
+    box-shadow: 0 0 0 3px rgb(46 172 151 / 14%);
+}
+
+.bh-table-responsive {
+    direction: rtl;
+    overflow-x: auto;
+}
+
+.bh-table-responsive table {
+    min-width: 680px;
+}
+
+.bh-table-responsive table thead tr th,
+.bh-table-responsive table tbody tr td {
+    text-align: right;
+}
+
+.bh-table-responsive table thead tr th {
+    white-space: nowrap;
+}
+
+.bh-table-responsive table tbody tr {
+    transition: background-color 150ms ease;
+}
+
+.bh-table-responsive .bh-pagination .bh-page-item.bh-active {
+    background-color: #16665b;
+    border-color: #16665b;
+}
+
+.mobile-responsive-table table {
+    min-width: 660px;
+}
+
+@media (max-width: 639px) {
+    .bh-table-responsive table {
+        min-width: 0 !important;
+    }
+
+    .mobile-responsive-table {
+        overflow: visible;
+    }
+
+    .mobile-responsive-table table {
+        display: block;
+        min-width: 0;
+    }
+
+    .mobile-responsive-table table thead {
+        display: none;
+    }
+
+    .mobile-responsive-table table tbody {
+        display: grid;
+        gap: 0.75rem;
+        padding: 0.25rem;
+    }
+
+    .mobile-responsive-table table tbody tr {
+        display: block;
+        overflow: hidden;
+        border: 1px solid #e8f0ed;
+        border-radius: 0.75rem;
+        background: #fff;
+        padding: 0.35rem 0.85rem;
+    }
+
+    .mobile-responsive-table table tbody tr td {
+        display: flex;
+        width: 100%;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 0.75rem;
+        border: 0;
+        border-bottom: 1px solid #f0f4f2;
+        padding: 0.55rem 0;
+        text-align: right;
+        white-space: normal;
+        overflow-wrap: anywhere;
+        font-size: 0.75rem;
+    }
+
+    .mobile-responsive-table table tbody tr td::before {
+        flex: 0 0 auto;
+        color: #7b8c87;
+        font-size: 0.66rem;
+        font-weight: 700;
+    }
+
+    .mobile-responsive-table table tbody tr td:nth-child(1)::before {
+        content: 'اسم الحضانة';
+    }
+
+    .mobile-responsive-table table tbody tr td:nth-child(2)::before {
+        content: 'اسم المسؤول';
+    }
+
+    .mobile-responsive-table table tbody tr td:nth-child(3)::before {
+        content: 'البريد الإلكتروني';
+    }
+
+    .mobile-responsive-table table tbody tr td:nth-child(4)::before {
+        content: 'تاريخ التسجيل';
+    }
+
+    .mobile-responsive-table table tbody tr td:last-child {
+        border-bottom: 0;
+    }
+
+    .mobile-responsive-table .bh-table-responsive table tbody tr td:nth-child(3) {
+        direction: ltr;
+        text-align: left;
+    }
+
+    .mobile-responsive-table .bh-table-responsive table tbody tr td:nth-child(3)::before {
+        direction: rtl;
+    }
+}
